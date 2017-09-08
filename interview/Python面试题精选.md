@@ -6,6 +6,7 @@
 <p>python多线程有个全局解释器锁（global interpeter lock），这个锁的意思是任意时间只能有一个线程使用解释器，跟单cpu跑多个程序的意思，大家都是轮着用的，这叫“并发”，不是“并行”。
 多进程间共享数据，可以使用multiprocessing.Value 和 multiprocessing.Array。
 </p>
+
 ### 试题：NO.02
 <strong>2.Python下是如何进行内存管理的？</strong>
 <p>Python引用了一个内存池（Memory pool）机制，即Pymalloc机制（malloc：n.分配内存）,用于管理对小块内存的申请和释放。</p>
