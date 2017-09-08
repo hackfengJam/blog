@@ -1,6 +1,4 @@
-@python
-class aa():
-	printf()
+<pre>
 |-- interview
 |   |-- 阿里一面总结.md
 |   |-- 阿里二面准备.md
@@ -41,4 +39,4 @@ class aa():
 |-- res/
 |-- LICENSE
 `-- README.md
-@
+</pre>
