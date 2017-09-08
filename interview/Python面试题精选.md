@@ -13,9 +13,11 @@
 <p>内存池（Memory pool）的概念当创建大量消耗小内存的对象时，频繁调用new/malloc会导致大量的内存碎片，致使效率降低。内存池的概念就是预先在内存中申请一定数量的，大小相等的内存块留作备用，当有新的内存需求时，就先从内存池中分配给这个需求，不够了，之后再申请新的内存。这样做最显著的优势就是能够减少内存碎片，提升效率。内存池的实现方式有很多，性能和适用范围也不一样。</p>
 <p>Python中内存管理机——Pymalloc：python中的内存管理机制都有两套实现，一套是针对小对象，就是大小小于256bits时，pymalloc会在内存池中申请内存空间；当大于256bits，则会直接执行new/malloc的行为来申请内存空间。关于释放内存方面，当一个对象的引用计数变为0时，python就会调用它的析构函数。在析构时，也采用了内存池机制，从内存池来的内存会被归还到内存池中，以避免频繁地释放动作。
 </p>
+
 ### 试题：NO.03
 <strong>3.什么是lambad函数？它有什么好处？</strong>
 <p>lambda 函数式一个可以接受任意多个参数（包括可选参数）并且返回单个表达式不能超过一个。不要试图向lambda函数中塞入太多的东西；如果你需要更复杂的东西，应该定义一个普通函数，然后想它多长就多长</p>
+
 ### 试题：NO.04
 <strong>4.如何Python输出一个Fibonacci数列？</strong>
 <pre>
@@ -24,6 +26,7 @@ while b < 100:
     print(b)
     a, b = b, a+b
 </pre>
+
 ### 试题：NO.05
 <strong>5.介绍一下Python中webbrowser的用法</strong><br>
 webbrowser模块提供一个高级接口来显示基于Web的文档，大部分情况下只需要简单的调用*open()*方法。<br>
@@ -45,6 +48,7 @@ webbrowser.get('chrome').open('www.baidu.com', new=1, autoraise=True)
 </pre>
 
 注册一个名字为*chrome*的浏览器，如果这个浏览器类型被注册就可以用`get()`方法来获取
+
 ### 试题：NO.06
 <strong>6.解释一下python的and-or语法</strong>
 <p>与C表达式 <code>bool ? a : b </code>类似，但是<code>bool and a or b</code>,当a 为假时，不会像C表达式<code>bool ? a : b </code>一样工作</p>应该将and-or技巧封装成一个函数：
@@ -57,6 +61,7 @@ print(choose(True,1,2))
 </pre>
 
 因为[a] 是一个非空列表，它永远不会为假。甚至a是 `0` 或 `''`或者其他假值，列表[a]为真，因为它有一个元素。
+
 ### 试题：NO.07 
 <strong>7.How do I iterate over a sequence in reverse order?</strong><br>
 一种方法，如果是list，则直接调用其`reverse()`方法
@@ -76,6 +81,7 @@ x = [sequence[i] for i in range(len(sequence)-1, -1, -1)]
 >>>
 [5, 4, 3, 2, 1]
 </pre>
+
 ### 试题：NO.08
 <strong>8.Python是如何进行类型转换的？</strong>
 
@@ -112,6 +118,7 @@ unichr(x)                                    将一个整数转换为Unicode字�
 ord(x)                                       将一个字符转换为它的整数值
 hex(x)                                       将一个整数转换为一个十六进制字符串
 oct(x)                                       将一个整数转换为一个八进制字符串  </pre>
+
 ### 试题：NO.09
 <strong>9.Python里面如何实现tuple和list的转换？</strong>
 <pre>
@@ -145,6 +152,7 @@ def to_generator(l):
 >>>print(to_list(a_tuple))
 [1, 2, [1, 2, 3], 3, 4]
 </pre>
+
 ### 试题：NO.10
 <strong>10.请写出一段Python代码实现删除一个list里面的重复元素？</strong>
 >
@@ -155,11 +163,13 @@ def to_generator(l):
 >>>print(L2)
 [4, 1, 3, 2, 5]
 </pre>
+
 ### 试题：NO.11
 <strong>11.Python里面如何实现单例模式？其他23中设计模式python如何实现？</strong>
 <pre>
 
 </pre>
+
 ### 试题：NO.12
 <strong>12.Python里面如何copy一个对象？</strong>
 >
@@ -205,6 +215,7 @@ before deepcopy L1:  [3, [3, 4, 5], 4, 5]
 after deepcopy L2:  [3, [3, 4, 1], 4, 5]
 after deepcopy L1:  [3, [3, 4, 5], 4, 5]
 </pre>
+
 ### 试题：NO.13
 <strong>13.如何用Python来进行查询和替换一个文本字符串？</strong>
 <pre>>>> words = 'Python is a very funny language!'  
@@ -217,6 +228,7 @@ after deepcopy L1:  [3, [3, 4, 5], 4, 5]
 >>> words.replace('Python', 'Java')     # replace()替换  
 'Java is a very funny language!'  
 </pre>
+
 ### 试题：NO.14
 <strong>14.Python里面search()和match()的区别？</strong>
 <pre>
@@ -251,8 +263,10 @@ three
 #re.match 默认只匹配一行，若要匹配全部需要加第三个参数: re.DOTALL；  
 #re.search匹配整个字符串。
 </pre>
+
 ### 试题：NO.15
 <strong>15.有两个序列a,b，大小都为n，序列元素的值任意整型数，无序？</strong>
+
 ### 试题：NO.16
 <strong>16.Python程序中文输出问题怎么解决？</strong>
 <pre>
@@ -271,6 +285,7 @@ py脚本文件中：跨字符集必须做设置，否则乱码
 2. 其次需将文件保存为UTF-8的格式！  
 3. 最后: s.decode('utf-8').encode('gbk')
 </pre>
+
 ### 试题：NO.17
 <strong>17.Python如何捕捉异常？</strong>
 <pre>
@@ -290,6 +305,7 @@ py脚本文件中：跨字符集必须做设置，否则乱码
 >>>try/finally语句可确保一定会进行需要的结束运算，无论程序是否有异常  
 5. 非常规控制流程 
 </pre>
+
 ### 试题：NO.18
 <strong>18.Python代码得到列表list的交集与差集？</strong>
 <pre>
@@ -300,8 +316,10 @@ py脚本文件中：跨字符集必须做设置，否则乱码
 >>> [i for i in list1 if i in list2]  
 [4, 5] 
 </pre>
+
 ### 试题：NO.19
 <strong>19.如何用Python来发送邮件？</strong>
+
 ### 试题：NO.20
 <strong>20.介绍一下except</strong>
 <pre>
