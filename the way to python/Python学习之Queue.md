@@ -51,8 +51,8 @@ queue.join() 实际上意味着等到队列为空，再执行别的操作
 如果队列为空，返回```True```,反之返回```False```
 
 
-```
-def queue_python():
+``` @python
+def queue_test():
     import queue
     myqueue = queue.Queue()
 ```
