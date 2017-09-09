@@ -6,6 +6,9 @@
 |   |-- 
 |   `-- 
 |-- acm/
+|-- the way to python
+    |-- basics
+        |-- Python学习之Queue.md
 |-- technology
 |-- tools
 |   |-- enable-IPv6.md
