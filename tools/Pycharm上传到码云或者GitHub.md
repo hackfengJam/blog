@@ -66,5 +66,6 @@ $ git config --global user.email "xxxxxx@xxx.com(邮箱)"
 ![Alt text](./images/10.png "第一步")
 
 
-8.在码云或者GitHub查看项目
+### 8.在码云或者GitHub查看项目
+
 接下来你就可以在你的https://git.oschina.net/xxxx/xx.git中看见你提交修改的代码了
