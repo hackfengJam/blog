@@ -18,7 +18,7 @@ $ git config --global user.email "xxxxxx@xxx.com(邮箱)"
 
 输入 
 
-<pre>ssh-keygen -t rsa -C "xxxxx@xxx.com" </pre>
+<pre>ssh-keygen -t rsa -C "xxxxx@xxx.com(邮箱)" </pre>
 
 **会生成```id_rsa```和```id_rsa.pub```（windows默认会生成在 C:\Users\xxxx\.ssh ，linux默认在我的home目录底下的 .ssh/），后面要添加的是"id_rsa.pub"里面的公钥。**
 
