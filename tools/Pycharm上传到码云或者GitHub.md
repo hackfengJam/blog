@@ -61,7 +61,7 @@ $ git config --global user.email "xxxxxx@xxx.com(邮箱)"
 
 ![Alt text](./images/9.png "第一步")
 
-**③.输入你的码云或者github用户名及密码**
+**③.输入你的码云或者github用户名及密码（第一次push时需要输入）**
 
 ![Alt text](./images/10.png "第一步")
 
