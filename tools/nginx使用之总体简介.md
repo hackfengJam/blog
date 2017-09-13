@@ -12,22 +12,22 @@
 
 - 模块化设计、较好扩展性
 - 高可靠性
- - master/worker
+  - master/worker
 - 支持热部署
- - 不停机-更新配置文件、更换日志、更新服务器程序版本；（平滑升级/迁移）
+  - 不停机-更新配置文件、更换日志、更新服务器程序版本；（平滑升级/迁移）
 - 低内存消耗
- - 10000个keep-alive连接模式下的非活动连接仅要好2.5M内存；event-driven，aio，mmap；
+  - 10000个keep-alive连接模式下的非活动连接仅要好2.5M内存；event-driven，aio，mmap；
 
 ### 2.功能
 
 - 基本功能
- -    静态资源的web服务器；
- -    http协议的反响代理服务；
- -    pop3，smpt，imap4等邮件协议的反向代理；
- -    能缓存打开的文件（元数据）、支持FastCGI（php-fpm），uWSGI（Python Web Framwork）等协议
- -    模块化（非DSO机制），过滤器zip，SSI，SSL；
+  - 静态资源的web服务器；
+  - http协议的反响代理服务；
+  - pop3，smpt，imap4等邮件协议的反向代理；
+  - 能缓存打开的文件（元数据）、支持FastCGI（php-fpm），uWSGI（Python Web Framwork）等协议
+  - 模块化（非DSO机制），过滤器zip，SSI，SSL；
 - Web服务相关的功能
- - 虚拟主机（server）、keepalive、访问日志（支持基于日志缓存提高其性能）、url rewrite、路径别名、基于IP及用户的访问控制、支持速率限制及并发数限制……
+  - 虚拟主机（server）、keepalive、访问日志（支持基于日志缓存提高其性能）、url rewrite、路径别名、基于IP及用户的访问控制、支持速率限制及并发数限制……
 
 ### 3.Nginx的基本架构：
 
