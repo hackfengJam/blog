@@ -1,3 +1,15 @@
+# 个人博客
+
+本仓库下存放个人博客的源文件。持续更新，欢迎 `star`。
+
+如果大家觉得那里写的不合适的可以给我提 `Issue`
+
+---
+
+```
+
+## 目录简介
+
 <pre>
 |-- interview
 |   `-- Python面试题精选.md
@@ -17,3 +29,8 @@
 |   `-- 欢迎使用CSDN-markdown编辑器.md
 `-- README.md
 </pre>
+
+```
+## Tips:
+
+- 为方便查阅博客，可以在浏览器安装 [Octotree](https://github.com/buunguyen/octotree) 插件
