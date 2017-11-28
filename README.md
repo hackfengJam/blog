@@ -22,6 +22,7 @@
 |       |-- 变量对象和引用.md
 |       `-- Python中的作用域及global用法.md
 |-- tools
+|   |-- Elasticsearch环境搭建.md
 |   |-- Pycharm上传到码云或者GitHub.md
 |   |-- nginx使用之配置文件的组成及主配置段的指令.md
 |   |-- nginx使用之总体简介.md
