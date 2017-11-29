@@ -60,8 +60,10 @@ Elasticsearch是一起开发数据采集和日志分析引擎叫Logstash，以�
 4. Install：切换到 ```elasticsearch-head``` 目录下，运行```cnpm install```
 5. 运行：直接 ```cpnm run start```
 6. 效果:
+	
 	![Alt text](./images/ElasticSearc环境搭建-3.png "结果")
 7. 发现输入：从浏览器访问```localhost:9200```是没问题，但是***elasticsearch-head***就是连不上。
+	
 	![Alt text](./images/ElasticSearc环境搭建-2.png "结果")
 	浏览器输入：```localhost:9100```
 	![Alt text](./images/ElasticSearc环境搭建-4.png "结果")
@@ -92,13 +94,17 @@ Kibana可以很容易理解大量数据。简单的，基于浏览器的界面�
 	- ***Windows***下运行```kibana ```
 	- ***Mac/Linux***下运行```./kibana```
 4. 效果:
+	
 	![Alt text](./images/ElasticSearc环境搭建-5.png "结果")
 5. 浏览器输入：```localhost:5601```
+	
 	![Alt text](./images/ElasticSearc环境搭建-6.png "结果") 
 6. 点击Dev Tools：
+	
 	![Alt text](./images/ElasticSearc环境搭建-7.png "结果")
 
 7. 接下来，请开始你的表演：
+	
 	![Alt text](./images/ElasticSearc环境搭建-8.png "结果") 
 
 
