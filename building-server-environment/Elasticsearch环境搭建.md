@@ -78,7 +78,8 @@ Elasticsearch是一起开发数据采集和日志分析引擎叫Logstash，以�
 	http.cors.allow-methods: OPTIONS, HEAD, GET, POST, PUT, DELETE
 	http.cors.allow-headers: "X-Requested-With, Content-Type, Content-Length, X-User"
 </pre>
-	将以上内容复制到```config/elasticsearch.yaml```最后，然后重启```es```和```head```即可
+
+将以上内容复制到```config/elasticsearch.yaml```最后，然后重启```es```和```head```即可
 
 ### 2.4 安装 kibana
 
