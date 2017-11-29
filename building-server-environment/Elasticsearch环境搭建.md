@@ -65,6 +65,7 @@ Elasticsearch是一起开发数据采集和日志分析引擎叫Logstash，以�
 7. 发现输入：从浏览器访问```localhost:9200```是没问题，但是***elasticsearch-head***就是连不上。
 	
 	![Alt text](./images/ElasticSearc环境搭建-2.png "结果")
+	
 	浏览器输入：```localhost:9100```
 	![Alt text](./images/ElasticSearc环境搭建-4.png "结果")
 	***注：这是由于elasticsearch的安全策略，默认不允许使用第三方服务（版本5之前elasticsearch-head是属于elasticsearch 的，但现在是单独的服务了，所以为出现这种情况）***
