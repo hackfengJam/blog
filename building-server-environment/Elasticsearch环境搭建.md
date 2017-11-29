@@ -44,8 +44,10 @@ Elasticsearch是一起开发数据采集和日志分析引擎叫Logstash，以�
 	- ***Mac/Linux***下运行```./elasticsearch```
 	- 切记不要用***root***用户去运行，否则会报错，具体自行 [百度](https://www.baidu.com/) / [谷歌](https://www.google.com)
 4. 效果:
+
 	![Alt text](./images/ElasticSearc环境搭建-1.png "结果")
 5. 浏览器输入：```localhost:9200```
+	
 	![Alt text](./images/ElasticSearc环境搭建-2.png "结果") 
 
  
