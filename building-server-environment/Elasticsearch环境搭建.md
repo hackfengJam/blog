@@ -72,12 +72,12 @@ Elasticsearch是一起开发数据采集和日志分析引擎叫Logstash，以�
 	***注：这是由于elasticsearch的安全策略，默认不允许使用第三方服务（版本5之前elasticsearch-head是属于elasticsearch 的，但现在是单独的服务了，所以为出现这种情况）***
 
 8. 设置安全策略
-	<pre>
+<pre>
 	http.cors.enabled: true
 	http.cors.allow-origin: "*"
 	http.cors.allow-methods: OPTIONS, HEAD, GET, POST, PUT, DELETE
 	http.cors.allow-headers: "X-Requested-With, Content-Type, Content-Length, X-User"
-	</pre>
+</pre>
 	将以上内容复制到```config/elasticsearch.yaml```最后，然后重启```es```和```head```即可
 
 ### 2.4 安装 kibana
