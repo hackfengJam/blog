@@ -9,7 +9,6 @@
 ## 目录简介
 
 ```
-<pre>
 |-- building-server-environment
 |   |-- Elasticsearch环境搭建.md
 |   |-- nginx使用之总体简介.md
@@ -30,7 +29,6 @@
 |   |-- Pycharm上传到码云或者GitHub.md
 |   `-- 欢迎使用CSDN-markdown编辑器.md
 `-- README.md
-</pre>
 
 ```
 ## Tips:
