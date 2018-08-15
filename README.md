@@ -9,9 +9,16 @@
 ## 目录简介
 
 ```
-<pre>
+|-- building_server_environment
+|   |-- nginx
+|   	|-- nginx使用之总体简介.md
+|		|-- nginx使用之配置文件的组成及主配置段的指令之一.md
+|		`-- nginx使用之配置文件的组成及主配置段的指令之二.md
+|   `-- Elasticsearch环境搭建.md
 |-- interview
 |   `-- Python面试题精选.md
+|-- reflection_and_summary
+|   `-- 给学弟学妹们总的方向及建议.md
 |-- the_way_to_python
 |   |-- basics_usage
 |       `-- Python学习之Queue.md
@@ -22,16 +29,11 @@
 |       |-- 变量对象和引用.md
 |       `-- Python中的作用域及global用法.md
 |-- tools
-|   |-- nginx
-|   	|-- nginx使用之总体简介.md
-|		|-- nginx使用之配置文件的组成及主配置段的指令之一.md
-|		`-- nginx使用之配置文件的组成及主配置段的指令之二.md
 |	|-- redis
 |		`-- Redis的正确打开方式.md
 |   |-- Pycharm上传到码云或者GitHub.md
 |   `-- 欢迎使用CSDN-markdown编辑器.md
 `-- README.md
-</pre>
 
 ```
 ## Tips:
