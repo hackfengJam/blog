@@ -2,9 +2,12 @@
 
 ## 1.介绍
 
-### 1.1 正向代理与反向代理：[正向代理与反向代理的区别](http://blog.csdn.net/m13666368773/article/details/8060481)
+### 1.1 正向代理与反向代理：
 
-### 1.2 负载均衡：[负载均衡 - 百度百科](https://baike.baidu.com/item/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/932451?fr=aladdin)
+[Forward-Proxy-vs-Reverse-Proxy](https://www.jscape.com/blog/bid/87783/Forward-Proxy-vs-Reverse-Proxy) / [正向代理与反向代理的区别](http://blog.csdn.net/m13666368773/article/details/8060481)
+
+### 1.2 负载均衡：
+[维基百科](https://en.wikipedia.org/wiki/Load_balancing_(computing)) / [百度百科](https://baike.baidu.com/item/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/932451?fr=aladdin)
 
 ## 2.实现
 
