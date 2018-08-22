@@ -20,7 +20,7 @@
 |-- chinese_300_tang_poems
 |	|-- 五言古诗_三十三首
 |	|	`-- 张九龄
-|	|		`-- 感遇_二首.md
+|	`		`-- 感遇_二首.md
 |
 |-- interview
 |   `-- Python面试题精选.md
@@ -36,7 +36,7 @@
 |   |       `-- 第一步Scrapy框架原理.md
 |   |-- underlying_knowledge
 |   |   |-- 变量对象和引用.md
-|   |   `-- Python中的作用域及global用法.md
+|   `   `-- Python中的作用域及global用法.md
 |
 |-- tools
 |	|-- redis
