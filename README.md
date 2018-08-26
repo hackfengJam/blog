@@ -19,7 +19,7 @@
 |   |   `-- nginx使用之配置文件的组成及主配置段的指令之二.md
 |   `-- Elasticsearch环境搭建.md
 |	
-|-- chinese_300_tang_poems
+|-- chinese
 |   |-- chinese_300_tang_poems
 |   |   |-- 五言古诗_三十三首
 |   |      `-- 张九龄
