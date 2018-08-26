@@ -20,9 +20,11 @@
 |   `-- Elasticsearch环境搭建.md
 |	
 |-- chinese_300_tang_poems
-|   |-- 五言古诗_三十三首
-|   |   `-- 张九龄
-|   |      `-- 感遇_二首.md
+|   |-- chinese_300_tang_poems
+|   |   |-- 五言古诗_三十三首
+|   |      `-- 张九龄
+|   |         `-- 感遇_二首.md
+|   `-- chinese_idiom.md
 |
 |-- interview
 |   `-- Python面试题精选.md
