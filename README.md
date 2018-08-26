@@ -11,6 +11,8 @@
 ```
 
 |-- building_server_environment
+|   |-- mysql
+|   |   `-- 数据库优化——索引优化.md
 |   |-- nginx
 |   |   |-- nginx使用之总体简介.md
 |   |   |-- nginx使用之配置文件的组成及主配置段的指令之一.md
