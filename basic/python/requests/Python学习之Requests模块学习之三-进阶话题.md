@@ -8,7 +8,7 @@ URL:https://developer.github.com/
 
 ## 3.1 HTTP认证
 
-![Alt text](./images/51-1.png)
+![Alt text](images/51-1.png)
 
 ### 1.基本认证
 <pre>
@@ -27,21 +27,21 @@ Authorization': 'Basic xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'Connection
 
 ### 结果1
 
-![Alt text](./images/51-2.png)
+![Alt text](images/51-2.png)
 
 这个结果其实就是一个base64的简单加密，因此很不安全
 
-![Alt text](./images/51-3.png)
+![Alt text](images/51-3.png)
 
 
 ### 2.OAUTH认证
 
-![Alt text](./images/51-4.png)
+![Alt text](images/51-4.png)
 
 #### 在GitHub上面设置一个
-![Alt text](./images/51-5.png)
+![Alt text](images/51-5.png)
 #### 从GitHub开发者api上找到认证方式
-![Alt text](./images/51-6.png)
+![Alt text](images/51-6.png)
 <pre>
 def base_oauth():
     headers = {'Authorization': 'token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'}
@@ -57,7 +57,7 @@ def base_oauth():
 
 ### 3.通过继承requests.auth.AuthBase进行OAUTH认证
 
-![Alt text](./images/51-7.png)
+![Alt text](images/51-7.png)
 <pre>
 from requests.auth import AuthBase
 
@@ -85,16 +85,16 @@ def oauth_advanced():
 
 </pre>
 ### 结果2
-![Alt text](./images/51-8.png)
+![Alt text](images/51-8.png)
 
 
 ## 3.2 代理（Proxy）
-![Alt text](./images/52-1.png)
-![Alt text](./images/52-2.png)
+![Alt text](images/52-1.png)
+![Alt text](images/52-2.png)
 
 
 ### 安装requests对socksv5支持，cmd下输入: pip install requests[socksv5]
-![Alt text](./images/52-3.png)
+![Alt text](images/52-3.png)
 
 ### 代码实现
 <pre>

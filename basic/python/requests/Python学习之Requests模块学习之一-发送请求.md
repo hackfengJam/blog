@@ -70,7 +70,7 @@ if __name__ == '__main__':
 ### 例子1：
 [https://developer.github.com/v3/users/#parameters-1](https://developer.github.com/v3/users/#parameters-1)
 
-![Alt text](./images/32-1.png)
+![Alt text](images/32-1.png)
 <pre>
 def params_request():
     response = requests.get(build_uri('users'), params={'since': 11})
@@ -79,7 +79,7 @@ def params_request():
     print response.url
 </pre>
 ### 结果1
-![Alt text](./images/32-2.png)
+![Alt text](images/32-2.png)
 
 ---
 
@@ -87,7 +87,7 @@ def params_request():
 
 [https://developer.github.com/v3/users/#update-the-authenticated-user](https://developer.github.com/v3/users/#update-the-authenticated-user)
 
-![Alt text](./images/32-3.png)
+![Alt text](images/32-3.png)
 
 <pre>
 def json_request():
@@ -98,7 +98,7 @@ def json_request():
     print response.status_code
 </pre>
 ### 结果2
-![Alt text](./images/32-4.png)
+![Alt text](images/32-4.png)
 
 ---
 
@@ -118,13 +118,13 @@ def json_request():
 
 ### 结果3
 
-![Alt text](./images/32-5.png)
+![Alt text](images/32-5.png)
 
 ---
 
 ## 3.3 请求异常处理
 
-![Alt text](./images/32-6.png)
+![Alt text](images/32-6.png)
 
 
 <pre>
@@ -149,7 +149,7 @@ TooManyRedirects
 URLRequired
 </pre>
 
-![Alt text](./images/32-7.png)
+![Alt text](images/32-7.png)
 
 ### 处理异常代码
 <pre>
@@ -163,7 +163,7 @@ def timeout_request():
 </pre>
 
 ### 结果
-![Alt text](./images/32-8.png)
+![Alt text](images/32-8.png)
 
 ---
 
@@ -184,11 +184,11 @@ def timeout_request():
 </pre>
 
 ### 结果
-![Alt text](./images/32-9.png)
+![Alt text](images/32-9.png)
 
 ## 3.4 自定义Request
 
-![Alt text](./images/32-10.png)
+![Alt text](images/32-10.png)
 
 <pre>
 class Request:的构造函数
@@ -208,7 +208,7 @@ def hard_requests():
     print prepped.headers
 </pre>
 ### 结果1
-![Alt text](./images/32-11.png)
+![Alt text](images/32-11.png)
 
 ### 代码2
 <pre>
@@ -227,7 +227,7 @@ def hard_requests():
     print resp.text
 </pre>
 ### 结果2
-![Alt text](./images/32-12.png)
+![Alt text](images/32-12.png)
 
 
 ## 参考

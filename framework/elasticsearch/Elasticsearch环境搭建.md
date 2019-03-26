@@ -45,10 +45,10 @@ Elasticsearch是一起开发数据采集和日志分析引擎叫Logstash，以�
 	- 切记不要用***root***用户去运行，否则会报错，具体自行 [百度](https://www.baidu.com/) / [谷歌](https://www.google.com)
 4. 效果:
 
-	![Alt text](./images/ElasticSearc环境搭建-1.png "结果")
+	![Alt text](images/ElasticSearc环境搭建-1.png "结果")
 5. 浏览器输入：```localhost:9200```
 	
-	![Alt text](./images/ElasticSearc环境搭建-2.png "结果") 
+	![Alt text](images/ElasticSearc环境搭建-2.png "结果") 
 
  
 
@@ -61,13 +61,13 @@ Elasticsearch是一起开发数据采集和日志分析引擎叫Logstash，以�
 5. 运行：直接 ```cpnm run start```
 6. 效果:
 	
-	![Alt text](./images/ElasticSearc环境搭建-3.png "结果")
+	![Alt text](images/ElasticSearc环境搭建-3.png "结果")
 7. ①.发现输入：从浏览器访问```localhost:9200```是没问题，但是***elasticsearch-head***就是连不上。
 	
-	![Alt text](./images/ElasticSearc环境搭建-2.png "结果")
+	![Alt text](images/ElasticSearc环境搭建-2.png "结果")
 	
 	②.浏览器输入：```localhost:9100```也显示确实未连接。
-	![Alt text](./images/ElasticSearc环境搭建-4.png "结果")
+	![Alt text](images/ElasticSearc环境搭建-4.png "结果")
 	
 	***注：这是由于elasticsearch的安全策略，默认不允许使用第三方服务（版本5之前elasticsearch-head是属于elasticsearch 的，但现在是单独的服务了，所以为出现这种情况）***
 
@@ -98,17 +98,17 @@ Kibana可以很容易理解大量数据。简单的，基于浏览器的界面�
 	- ***Mac/Linux***下运行```./kibana```
 4. 效果:
 	
-	![Alt text](./images/ElasticSearc环境搭建-5.png "结果")
+	![Alt text](images/ElasticSearc环境搭建-5.png "结果")
 5. 浏览器输入：```localhost:5601```
 	
-	![Alt text](./images/ElasticSearc环境搭建-6.png "结果") 
+	![Alt text](images/ElasticSearc环境搭建-6.png "结果") 
 6. 点击Dev Tools：
 	
-	![Alt text](./images/ElasticSearc环境搭建-7.png "结果")
+	![Alt text](images/ElasticSearc环境搭建-7.png "结果")
 
 7. 接下来，请开始你的表演：
 	
-	![Alt text](./images/ElasticSearc环境搭建-8.png "结果") 
+	![Alt text](images/ElasticSearc环境搭建-8.png "结果") 
 
 
 

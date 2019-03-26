@@ -1,7 +1,7 @@
 ## Scrapy架构原理初探
 
 ### 1.Scrapy架构图
-![Alt text](./images/scrapy_architecture_01.png)
+![Alt text](images/scrapy_architecture_01.png)
 #### 1. Scrapy Engine（Scrapy引擎）
 引擎负责控制数据流在系统中所有组件中流动，并在相应动作发生时触发事件。
 
@@ -29,7 +29,7 @@ Spider中间件是在引擎及Spider之间的特定钩子(specific hook)，处�
 > ### 2.来自[官方文档][guanfang-doc]的架构浏览
 
 
-> ![Alt text](./images/scrapy_architecture_02.png)
+> ![Alt text](images/scrapy_architecture_02.png)
 
 > #### 数据流(Data flow)
 > Scrapy中的数据流由执行引擎控制，其过程如下:

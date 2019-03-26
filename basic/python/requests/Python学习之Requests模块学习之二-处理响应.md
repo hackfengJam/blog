@@ -25,31 +25,31 @@ json：json格式
 
 ### 例子演示1
 
-![Alt text](./images/41-1.png)
+![Alt text](images/41-1.png)
 
 ### 例子演示2
 
-![Alt text](./images/41-2.png)
+![Alt text](images/41-2.png)
 
 ### 例子演示3
 
-![Alt text](./images/41-3.png)
+![Alt text](images/41-3.png)
 
 ### 例子演示4
 
-![Alt text](./images/41-4.png)
+![Alt text](images/41-4.png)
 
 ### 例子演示5
 
-![Alt text](./images/41-5.png)
+![Alt text](images/41-5.png)
 
 ### 例子演示6
 
-![Alt text](./images/41-6.png)
+![Alt text](images/41-6.png)
 
 ### 例子演示7
 
-![Alt text](./images/41-7.png)
+![Alt text](images/41-7.png)
 
 
 ## 2.2 下载图片/文件
@@ -86,12 +86,12 @@ def download_request():
 
 </pre>
 
-![Alt text](./images/23-1.png)
+![Alt text](images/23-1.png)
 
 ## 2.3 事件钩子（Event Hooks）
 
 
-![Alt text](./images/23-2.png)
+![Alt text](images/23-2.png)
 
 <pre>
 #!/usr/bin/env python
@@ -124,7 +124,7 @@ text/html
 ['__attrs__', '__bool__', '__class__', '__delattr__', '__dict__', '__doc__', '__enter__', '__exit__', '__format__', '__getattribute__', '__getstate__', '__hash__', '__init__', '__iter__', '__module__', '__new__', '__nonzero__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_content', '_content_consumed', '_next', 'apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'next', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
 </pre>
 
-![Alt text](./images/23-3.png)
+![Alt text](images/23-3.png)
 
 
 ## 参考
