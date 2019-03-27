@@ -41,17 +41,20 @@
 
 - 【各种技术】
     - Redis
-        - [Redis的正确打开方式](./building_server_environment/redis/Redis的正确打开方式.md)
-        - [高并发情况下Redis做缓存的一系列问题_pending](./building_server_environment/redis/高并发情况下Redis做缓存的一系列问题_pending.md)
+        - [Redis的正确打开方式](tech/redis/Redis的正确打开方式.md)
+        - [高并发情况下Redis做缓存的一系列问题_pending](tech/redis/高并发情况下Redis做缓存的一系列问题_pending.md)
     - Kafka
-        - [初识kafka_pending](./building_server_environment/kafka/初识kafka_pending.md)
+        - [初识kafka_pending](tech/kafka/初识kafka_pending.md)
     - MYSQL
-        - [数据库优化 - 索引优化](./building_server_environment/mysql/数据库优化——索引优化.md)
-        - [Mysql大表处理_pending](./building_server_environment/mysql/Mysql大表处理_pending.md)
+        - [数据库优化 - 索引优化](tech/mysql/数据库优化——索引优化.md)
+        - [Mysql大表处理_pending](tech/mysql/Mysql大表处理_pending.md)
     - Nginx
-        - [nginx - 使用之总体简介](./building_server_environment/nginx/nginx使用之总体简介.md)
-        - [nginx - 使用之配置文件的组成及主配置段的指令之一](./building_server_environment/nginx/nginx使用之配置文件的组成及主配置段的指令之一.md)
-        - [nginx - 使用之配置文件的组成及主配置段的指令之二](./building_server_environment/nginx/nginx使用之配置文件的组成及主配置段的指令之二.md)
+        - [nginx - 使用之总体简介](tech/nginx/nginx使用之总体简介.md)
+        - [nginx - 使用之配置文件的组成及主配置段的指令之一](tech/nginx/nginx使用之配置文件的组成及主配置段的指令之一.md)
+        - [nginx - 使用之配置文件的组成及主配置段的指令之二](tech/nginx/nginx使用之配置文件的组成及主配置段的指令之二.md)
+    - 分布式
+        - [分布式id生成算法 - SnowFlake](tech/distributed/分布式id生成算法SnowFlake.md)
+
 
 - 【反省与总结】
     - 面试
