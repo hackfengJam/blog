@@ -54,6 +54,8 @@
         - [nginx - 使用之配置文件的组成及主配置段的指令之二](tech/nginx/nginx使用之配置文件的组成及主配置段的指令之二.md)
     - 分布式
         - [分布式id生成算法 - SnowFlake](tech/distributed/分布式id生成算法SnowFlake.md)
+        - [Eureka 的介绍](tech/springcloud/Eureka介绍.md)
+        - [Eureka Server 和 Client 之间的信息维护（注册和续约）](tech/springcloud/Eureka_Server_和_Client_之间的信息维护（注册和续约）.md)
 
 
 - 【反省与总结】
