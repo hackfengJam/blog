@@ -41,6 +41,7 @@
     - SpringCloud
         - [Eureka 的介绍](tech/springcloud/Eureka介绍.md)
         - [Eureka Server 和 Client 之间的信息维护（注册和续约）](tech/springcloud/Eureka_Server_和_Client_之间的信息维护（注册和续约）.md)
+        - [Zuul 的介绍](tech/springcloud/Zuul介绍.md)
 
 - 【各种技术】
     - Redis
