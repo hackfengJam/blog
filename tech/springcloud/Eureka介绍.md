@@ -105,7 +105,7 @@ The existing open source work on eureka 2.0 is discontinued. The code base and a
 
 Eureka 1.x is a core part of Netflix's service discovery system and is still an active project.
 
-关于Eureka 2.0 开源工作已经停止，网络上还是有一些争议的，在下就不在此抱怨了。
+关于Eureka 2.0 开源工作已经停止，网络上还是有一些讨论的，小弟就不在此发表意见了，有兴趣可以自己了解一下。
 
 对于使用 Eureka 1.x 的，可以看一下这篇文章 [Eureka 2.0 开源流产，真的对你影响很大吗？](http://blog.didispace.com/Eureka-2-0-discontinued/)
 
