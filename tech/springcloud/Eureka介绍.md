@@ -42,11 +42,23 @@
 
 ## 结尾
 
-1. Eureka Server 维护了系统中服务的元信息，这些元信息包含什么你知道吗 ？
+- Eureka Server 维护了系统中服务的元信息，这些元信息包含什么你知道吗 ？
 
-2. 元信息又是怎么存储的呢 ？
+- 元信息又是怎么存储的呢 ？
 
-各位可以先考虑一下，关于问题解答，参考下一篇博文 [Eureka Server 和 Client 之间的信息维护（注册和续约）](Eureka_Server_和_Client_之间的信息维护（注册和续约）.md)
+以上两个问题，各位可以先考虑一下，关于问题解答，参考下一篇博文 [Eureka Server 和 Client 之间的信息维护（注册和续约）](Eureka_Server_和_Client_之间的信息维护（注册和续约）.md)
+
+- [Eureka 官方 wiki](https://github.com/Netflix/eureka/wiki) 提到
+
+Eureka 2.0 (Discontinued)
+
+The existing open source work on eureka 2.0 is discontinued. The code base and artifacts that were released as part of the existing repository of work on the 2.x branch is considered use at your own risk.
+
+Eureka 1.x is a core part of Netflix's service discovery system and is still an active project.
+
+关于Eureka 2.0 开源工作已经停止，网络上还是有一些争议的，在下就不在此抱怨了。
+
+对于使用 Eureka 1.x 的，可以看一下这篇文章 [Eureka 2.0 开源流产，真的对你影响很大吗？](http://blog.didispace.com/Eureka-2-0-discontinued/)
 
 ## 感谢
 
