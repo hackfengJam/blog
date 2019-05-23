@@ -52,6 +52,9 @@
     - MYSQL
         - [数据库优化 - 索引优化](tech/mysql/数据库优化——索引优化.md)
         - [Mysql大表处理_pending](tech/mysql/Mysql大表处理_pending.md)
+        - [数据库 - 如何设计一个关系型数据库](tech/mysql/数据库——1_数据库架构.md)
+        - [数据库 - 索引管理_pending](tech/mysql/数据库——2_索引管理_pending.md)
+        - [数据库 - 锁管理_pending](tech/mysql/数据库——3_锁管理_pending.md)
     - Nginx
         - [nginx - 使用之总体简介](tech/nginx/nginx使用之总体简介.md)
         - [nginx - 使用之配置文件的组成及主配置段的指令之一](tech/nginx/nginx使用之配置文件的组成及主配置段的指令之一.md)
