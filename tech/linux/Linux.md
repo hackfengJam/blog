@@ -176,6 +176,17 @@ awk -F "," {print $2}' test.txt
 
 ```
 
+```shell
+grep 'partial\[true\]' data.info.log | grep -o 'engine\[[0-9][a-z]*\]' | awk '{enginearr[$1]++}END{for(i in enginearr)print i "\t" enginearr[i]}'
+>>>
+engine[ad75229ffd7d7df5f5d41d17b9a]  4
+engine[bd75229ffd7d7df5f5d41d17b9a]  2
+engine[cd75229ffd7d7df5f5d41d17b9a]  7
+engine[dd75229ffd7d7df5f5d41d17b63]  10
+engine[7e75229ffd7d7df5f5d41d17b18]  10
+engine[7e75229ffd7d7df5f5d41d17b18]  8
+```
+
 
 #### 4.2 总结，常用的方式
 
