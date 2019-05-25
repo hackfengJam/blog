@@ -24,7 +24,7 @@
             - [Python之路_进程_线程](./basic/python/concurrency/Python_多进程_进程池.md)
     
     - Golang
-        - [用go实现nginx反向代理及负载均衡](./basic/golang/用go实现nginx反向代理及负载均衡.md)
+        - [用 golang 实现 nginx 反向代理及负载均衡](./basic/golang/用go实现nginx反向代理及负载均衡.md)
         
     - Java
         - Pending
@@ -61,6 +61,10 @@
         - [nginx - 使用之配置文件的组成及主配置段的指令之二](tech/nginx/nginx使用之配置文件的组成及主配置段的指令之二.md)
     - 分布式
         - [分布式id生成算法 - SnowFlake](tech/distributed/分布式id生成算法SnowFlake.md)
+    - Linux
+        - [Linux](./tech/linux/Linux.md)
+        - [select、poll、epoll](./tech/linux/select_poll_epoll.md)
+        - [零拷贝 - NIO](./tech/linux/零拷贝_NIO.md)
 
 
 - 【反省与总结】
@@ -85,6 +89,18 @@
 [Gitee](https://gitee.com/hackfun)
 
 [GitHub](https://github.com/hackfengJam)
+
+## TODO list
+
+- Linux 
+
+- 初识 kafka 
+
+- kafka 高级特性之消息事务
+
+- Mysql大表处理
+
+- 高并发情况下 Redis 做缓存的一系列问题
 
 ## Tips:
 
