@@ -187,6 +187,26 @@ engine[7e75229ffd7d7df5f5d41d17b18]  10
 engine[7e75229ffd7d7df5f5d41d17b18]  8
 ```
 
+- awk与sort妙用
+```shell
+echo '$SHELL' 单引号会原样输出
+echo "$SHELL" 双引号会解析引号里面的变量
+``单反号是执行命令
+
+cat file1 file2 file3 > err.out 2>&1
+2>&1是把错误信息打到文件里，没有则是不打印错误信息
+
+查看sda1占用磁盘大小去掉%  -f ":" 以冒号为分隔符
+awk是选择第几列，sed是过滤 格式sed 's/要替换的东东/用什么替换(可以为空)/'
+df | grep /dev/sda1  | awk '{print $5}' | sed 's/%//'
+
+sort默认是从小到大 -r逆序 -k指第几列 -n为按照数值大小排序
+从小到大取最后三行
+grep "2014-02-*" gpdata.txt | sort -n -k7 | tail -3
+从大到小取头头三行
+grep "2014-02-*" gpdata.txt | sort -n -k7 -r | head -3
+
+```
 
 #### 4.2 总结，常用的方式
 
