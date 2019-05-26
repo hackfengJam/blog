@@ -338,4 +338,6 @@ Str c = "The xx   xxxxxxxxxxxxxx";
 
 ## 感谢
 
-...
+[awk 之 asort 与 asorti 数组排序区别及演示](http://blog.chinaunix.net/uid-21374062-id-3189744.html)
+
+[awk 数组排序教程(内置函数排序与自定义排序函数)](http://linux.it.net.cn/e/command/2015/0502/14989.html)
