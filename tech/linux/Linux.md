@@ -208,6 +208,16 @@ grep "2014-02-*" gpdata.txt | sort -n -k7 -r | head -3
 
 ```
 
+- awk 之 asort 与 asorti 数组排序区别及演示
+
+```shell
+awk '{{enginearr[$1]++}END{slen=asorti(enginearr,b);for(i=1;i<=slen;i++) print i "\t" enginearr[i] "\t" enginearr[i]}'
+
+报错：function asort never defined
+
+sudo apt-get install gawk
+```
+
 #### 4.2 总结，常用的方式
 
 - ```awk '{print $1,$4}' netstat.txt```
