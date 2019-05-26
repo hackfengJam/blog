@@ -121,7 +121,7 @@ SYN + ACK 包，此时服务器进入SYN_RECV 状态
             |          |             XXXXXXXXXXXXX |          |               |
             |----------|XXXXXXXXXXXXX              | CLOSE-   |               |
             |          |       data transfer       |  WAIT    |               |
-            |          +<------------------------->+          |               |
+            |          +<--------------------------+          |               |
             |  FIN-    |  FIN=1,ACK=1,seq=w,ack=u+1|          |  被 动 关 闭   |
             |  WAIT-2  |                  XXXXXXXXXX----------+<--------------+
             |          |    XXXXXXXXXXXXXXX        |          |
