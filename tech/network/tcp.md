@@ -1,343 +1,202 @@
-## Linux
+## TCP
 
-### 1. Linux 的体系结构
+### 1. TCP 的三次握手 
 
-#### 1.1 Linux
+#### 1.1 传输控制协议 TCP 简介
 
-- 体系结构主要分为用户态（用户上层活动）和内核态
+- 面向连接的、可靠的、基于字节流的传输层通信协议
 
-- 内核：本质是一段管理计算机硬件设备的程序
+- 将应用层的数据流分割成报文段并发送诶目标节点的 TCP 层
 
-- 系统调用：内核的访问接口，是一种能再简化的操作
+- 数据包都有序号，对方收到则发送 ACK 确认，未收到则重传
 
-    - man 2 syscalls 
+- 使用校验和来检验数据在传输过程中是否有误
     
-    - man 2 acct 
-    
+题外话：
 
-- 公共函数库：系统调用的组合拳
+- 进程间通信：管道，内存共享，信号量，消息队列等
 
-- **Shell：命令解释器，可编程**
+#### 1.2 TCP Flags
 
-    - echo $SHELL
-    
-    - cat /etc/shells
+- URG：紧急指针标志
+
+- **ACK：确认序号标志**
+
+- PSH：push标志
+
+- RST：重置连接标志
+
+- **SYN：同步序号，用于建立连接过程**
+
+- **ACK：finish 标志，用于释放连接**
+
+题外话：
+
+- TCP：全双工通信
 
 
-### 2. 查找特定文件
+#### 1.3 TCP 三次握手
 
-#### 2.1 find
+```
++------------+ Client                                 Server  +------------+
+|                                                                          |
+|           +----------+                           +----------+            |
+|主 动 打 开 |  CLOSED  +                           |  CLOSED  |被 动 打 开  |
++---------->----------+XXXX  ACK=1,seq=x           +-----------<-----------+
+            |          +   XXXX                    |          |
+            | SYN-SENT |       XXXXX               |  LISTEN  |
+            |          |            XXXXXXXXXXX    |          |
+            |          |                      XXXXXX----------+
+            |          |SYN=1,ACK=1,seq=y,ack=x+1 XX          |
+            |          |               XXXXXXXXXXXX+ SYN-RECV |
+            |          |        XXXXXXX            |          |
+            |          +  XXXXXX                   |          |
+            +---------+XXX                         |          |
+            |          +XX   ACK=1,seq=x+1,ack=y+1 |          |
+            |  ESTAB-  |  XXX                      |          |
+            |  LISHED  |     XXXXXX                |          |
+            |          |          XXXXXXXXXXXX     |          |
+            |          |                     XXXXXXX----------+
+            |          |                           |          |
+            |          |       data transfer       | ESTAB-   |
+            |          +<------------------------->+ LISHED   |
+            |          |                           |          |
+            +----------+                           +----------+
 
-```shell
-语法 find path [options] params
-作用：在指定目录下查找文件
 ```
 
-- 默认搜索当前目录
+- 在 TCP/IP 协议中，TCP 协议提供可靠的连接服务，采用三次握手建议一个连接。
 
-```shell
-find -name "target.java"
+- 第一次握手：建立连接时，客户端发送 SYN 包（SYN=1）到服务器，并进入 SYN_SENT 状态，等待服务器确认。
+
+- 第二次握手：服务端收到 SYN 包，必须确认客户端的 SYN(ack=j+1)，同时自己也发送一个 SYN 包 (syn=k)，即
+SYN + ACK 包，此时服务器进入SYN_RECV 状态
+
+- 第三次握手：客户端收到服务器的 SYN + ACK 包，向服务器发送确认包 ACK（ack=k+1），此包发送完毕，
+客户端和服务器进入 ESTABLISHED 状态，完成三次握手。
+
+#### 1.4 为什么需要三次握手才能建立起连接
+
+为了初始化 Sequence Number 的初始值
+
+#### 1.5 首次握手的隐患 —— SYN 超时
+
+1.5.1 问题起因分析
+
+- Server 收到 Client 的 SYN，回复 SYN-ACK 的时候未收到 ACK 确认
+
+- Server 不断重试直至超时，Linux 默认等待 63 秒（1+2+4+8+16+32=63s 默认5次重试包） 才能断开连接
+
+1.5.2 针对 SYN Flood 的防护措施
+
+- SYN 队列满后，通过 tcp_syncookies 参数回发 SYN Cookie
+
+- 若为正常连接则 Client 会回发 SYN Cookie，直接建立连接
+
+#### 1.6 建立连接后，Client 出现故障怎么办
+
+1.6.1 保活机制
+
+- 向对方发送保活探测报文，如果未收到响应则继续发送
+
+- 尝试次数达到保活探测数 仍未收到响应则中断连接
+
+
+### 2. TCP 的四次挥手 
+
+#### 2.1 TCP 四次挥手
+
+```
++------------+ Client                                 Server  ----------------+
+|                                                             <------------+  |
+|           +----------+                           +----------+            |  |            
+|主 动 关 闭 |  ESTAB-  |                           |          |            |  | 
+|           |  LISHED  |                           |          |            |  | 
++---------->+----------+XXXX  FIN=1,seq=u          |  ESTAB-  |            |  |
+            |          +   XXXX                    |  LISHED  |            |  |
+            |  FIN-    |       XXXXX               |          |            |  |
+            |  WAIT-1  |            XXXXXXXXXXX    |          | 通知应用进程 |  |
+            |          |                       XXXXX----------+------------+  |
+            |          |  ACK=1,seq=v,ack=u+1    XX|          |               |
+            |          |             XXXXXXXXXXXXX |          |               |
+            |----------|XXXXXXXXXXXXX              | CLOSE-   |               |
+            |          |       data transfer       |  WAIT    |               |
+            |          +<------------------------->+          |               |
+            |  FIN-    |  FIN=1,ACK=1,seq=w,ack=u+1|          |  被 动 关 闭   |
+            |  WAIT-2  |                  XXXXXXXXXX----------+<--------------+
+            |          |    XXXXXXXXXXXXXXX        |          |
+|-----------+----------+XXXX                       |          |
+| wait 2 MSL|          |  XX FIN=1,seq=u+1,ack=w+1 |  LAST-   |
+|           |  TIME-   |   XX                      |   ACK    |
+|           |  WAIT    |     XXXXXX                |          |
+|           |          |          XXXXXXXXXXXX     |          |
+|           |          |                     XXXXXXX----------+
+|           |          |                           | CLOSED   |
++---------->+----------+                           +----------+
+            |  CLOSED  |                           
+            +----------+                                       
+
+注：2 MSL，MSL 即 MaximumSegmentLifetime，一个数据分片（报文）在网络中能够生存的最长时间
+
+RFC 定义 MSL= 2min
+Linux 定义 MSL = 30s
+
 ```
 
-- 从根开始搜索
+
+TCP 采用四次挥手来释放连接
+
+- 第一次挥手：Client 发送一个 FIN，用来关闭 Client 到 Server 的数据传输，Client 进入 FIN_WAIT_1 状态
+
+- 第二次挥手：Server 收到 FIN 后，发送一个 ACK 给 Client，确认序列号为收到序列号 +1（与 SYN相同，一个FIN 占用一个序号），
+Server 进入 CLOSE_WAIT 状态；
+
+- 第三次挥手：Server 发送一个 FIN，用来关闭 Server 到 Client 的数据传输，Server 进入 LAST_ACK 状态；
+
+- 第四次挥手：Client 收到 FIN 后，Client 进入 TIME_WAIT 状态，接着发送一个 ACK 给 Server，确认序列号为收到序列号+1，
+Server 进入 CLOSED 状态，完成四次挥手。
+
+#### 2.2 为什么有 TIME_WAIT 状态
+
+- 确保有足够的时间让对方收到 ACK 包
+
+- 避免新旧连接混淆
+
+#### 2.3 为什么需要四次握手才能断开连接
+
+因为全双工，发送方和接收方都需要 FIN 报文和 ACK 报文
+
+#### 2.4 服务器出现大量 CLOSE_WAIT 状态的原因
+
+- 对方关闭 socket 连接，我方忙于读或写，没有及时关闭连接
+
+- 检查代码，特别是释放资源的代码
+
+- 检查配置，特别是处理请求的线程配置
 
 ```shell
-find / -name "target.java"
-```
-
-- 通配符搜索
-
-```shell
-find / -name "target*"
-```
-
-- 忽略大小写
-
-```shell
-find / -iname "target*"
-```
-
-#### 2.2 总结，常用的方式
-
-- find ~ -name "target.java" ：精确查找文件
-
-- find ~ -name "target*" ：模糊查找文件
-
-- find ~ -iname "target*" ：不区分文件名大小写模糊查找文件
-
-- man find ：更多关于 find 指令的使用说明
-
-
-### 3. 检索文件内容
-
-#### 3.1 grep
-
-```shell
-语法 grep [options] pattern file
-全称：Global Regular Expresssion Print
-作用：查找文件里符合条件的字符串
-```
-
-- 检索文件
-
-```shell
-grep "haha*" target
-```
-
-- **管道操作符 |**
-
-    - 可将指令连接起来，前一个指令的输出作为后一个指令的输入
-    
-    - command_1 STDOUT|STDIN command_2 STDOUT|STDIN command_3 
-
-- 使用管道注意的要点
-
-    - 只处理前一个命令的正确输出，不处理错误输出
-    
-    - 右边命令必须能够接受标准输入流，否则传递过程中数据会被抛弃
-    
-    - sed, awk, grep, cut, head, top, less, more, wc, join, sort, split 等
-
-
-```shell
-grep 'partial\[true\]' data.info.log | grep -o 'engine\[[0-9][a-z]*\]'
+netstat -n | awk '/^TCP/{++S[$NF]}END{for(a in S) print a,S[a]}'
 
 >>>
-engine[ad75229ffd7d7df5f5d41d17b9a]
-engine[bd75229ffd7d7df5f5d41d17b9a]
-engine[cd75229ffd7d7df5f5d41d17b9a]
-engine[dd75229ffd7d7df5f5d41d17b63]
-engine[7e75229ffd7d7df5f5d41d17b18]
+CLOSE_WAIT 6
+FIN_WAIT_1 2
+ESTABLISHED 28
+SYN_SENT 3
+
+$NF Filed 代表最后最后一列
+
+Windows：
+　　“/”是表示参数，“\”是表示本地路径。
+Linux和Unix：
+　　“/”表示路径，“\”表示转义，“-”和“--”表示参数。
+网络：
+　　由于网络使用Unix标准，所以网络路径用“/”。　　
+
+
+连接太多最终可能会报：
+too many open files
 ```
-
-- 排除 -v 非过滤
-
-```shell
-ps -ef | grep tomcat | grep -v "grep"
-```
-
-
-#### 3.2 总结，常用的方式
-
-- ```grep 'partial\[true\]' data.info.log | grep -o 'engine\[[0-9][a-z]*\]' ：精确查找文件```
-
-- ```grep -o 'engine\[[0-9][a-z]*\]'```
-
-- ```grep -v "grep"```
-
-
-### 4. 对日志内容做统计
-
-#### 4.1 awk
-
-```shell
-语法 awk [options] 'cmd' file
-- 一次读取一行文本，按输入分隔符进行切片，切成多个组成部分
-- 将切片直接保存在内建的变量中，$1, $2...（$0 表示行的全部）
-- 支持对单个切片的判断，支持循环判断，默认分隔符为空格
-```
-
-
-```shell
-cat netstat.txt
-
-awk '{print $1,$4}' netstat.txt
->>>
-Proto Local
-tcp 115.28.159.6:ssh
-tcp localhost:mysql
-tcp localhost:mysql
-udp localhost:40504
-```
-
-
-```shell
-awk '$1=="tcp" && $2==1{print $0}' netstat.txt
-```
-
-```shell
-cat test.txt
->>>
-dafa,123123132
-dafa,213
-dafa,65432
-dafa,3245
-dafa,86453
-dafa,123123132
-
-awk -F "," {print $2}' test.txt
->>>
-123123132
-213
-65432
-3245
-86453
-123123132
-
-```
-
-```shell
-grep 'partial\[true\]' data.info.log | grep -o 'engine\[[0-9][a-z]*\]' | awk '{enginearr[$1]++}END{for(i in enginearr)print i "\t" enginearr[i]}'
->>>
-engine[ad75229ffd7d7df5f5d41d17b9a]  4
-engine[bd75229ffd7d7df5f5d41d17b9a]  2
-engine[cd75229ffd7d7df5f5d41d17b9a]  7
-engine[dd75229ffd7d7df5f5d41d17b63]  10
-engine[7e75229ffd7d7df5f5d41d17b18]  10
-engine[7e75229ffd7d7df5f5d41d17b18]  8
-```
-
-- awk与sort妙用
-```shell
-echo '$SHELL' 单引号会原样输出
-echo "$SHELL" 双引号会解析引号里面的变量
-``单反号是执行命令
-
-cat file1 file2 file3 > err.out 2>&1
-2>&1是把错误信息打到文件里，没有则是不打印错误信息
-
-查看sda1占用磁盘大小去掉%  -f ":" 以冒号为分隔符
-awk是选择第几列，sed是过滤 格式sed 's/要替换的东东/用什么替换(可以为空)/'
-df | grep /dev/sda1  | awk '{print $5}' | sed 's/%//'
-
-sort默认是从小到大 -r逆序 -k指第几列 -n为按照数值大小排序
-从小到大取最后三行
-grep "2014-02-*" gpdata.txt | sort -n -k7 | tail -3
-从大到小取头头三行
-grep "2014-02-*" gpdata.txt | sort -n -k7 -r | head -3
-
-```
-
-- awk 之 asort 与 asorti 数组排序区别及演示
-
-```shell
-awk '{{enginearr[$1]++}END{slen=asorti(enginearr,b);for(i=1;i<=slen;i++) print i "\t" enginearr[i] "\t" enginearr[i]}'
-
-报错：function asort never defined
-
-sudo apt-get install gawk
-```
-
-#### 4.2 总结，常用的方式
-
-- ```awk '{print $1,$4}' netstat.txt```
-
-- ```awk '$1=="tcp" && $2==1 {print $0}' netstat.txt```
-
-- ```awk '{enginearr[$1]++}END{for(i in enginearr)print i "\t" enginearr[i]}'```
-
-
-
-### 5. 批量替换文本内容
-
-#### 5.1 sed
-
-```shell
-语法 sed [option] 'sed cmd' filename
-- 全名：stream editor，流编辑器
-- 适合用于对文本的行内容进行处理
-```
-
-
-```shell
-sed 's/^Str/String/' replace.java
->>> 
-String a = "The xx   xxxxxxxxxxxxxx".
-Str b = "The xx   jackxxxjackxxjackxxxx";
-String c = "The xx   xxxxxxxxxxxxxx".
-
-
-Integer bf = new Integer(2);
-```
-
-```shell
-cat replace.java
->>>
-Str a = "The xx   xxxxxxxxxxxxxx".
-Str b = "The xx   jackxxxjackxxjackxxxx";
-Str c = "The xx   xxxxxxxxxxxxxx".
-
-
-Integer bf = new Integer(2);
-```
-
-```shell
-sed -i 's/\.$/\;/' replace.java
-
-cat replace.java
->>>
-Str a = "The xx   xxxxxxxxxxxxxx";
-Str b = "The xx   jackxxxjackxxjackxxxx";
-Str c = "The xx   xxxxxxxxxxxxxx";
-
-
-Integer bf = new Integer(2);
-```
-
-- / / /g 该行全局替换， 没有g，则代表只替换第一次匹配的字符串
-```shell
-sed -i 's/jack/me/' replace.java
-
-cat replace.java
->>>
-Str a = "The xx   xxxxxxxxxxxxxx";
-Str b = "The xx   mexxxjackxxjackxxxx";
-Str c = "The xx   xxxxxxxxxxxxxx";
-
-
-Integer bf = new Integer(2);
-```
-
-```shell
-sed -i 's/jack/me/g' replace.java
-
-cat replace.java
->>>
-Str a = "The xx   xxxxxxxxxxxxxx";
-Str b = "The xx   mexxxmexxmexxxx";
-Str c = "The xx   xxxxxxxxxxxxxx";
-
-
-Integer bf = new Integer(2);
-```
-
-- / / /d 
-
-```shell
-sed -i '/Integer/d' replace.java
-
-cat replace.java
->>>
-Str a = "The xx   xxxxxxxxxxxxxx";
-Str b = "The xx   mexxxmexxmexxxx";
-Str c = "The xx   xxxxxxxxxxxxxx";
-```
-
-
-#### 5.2 总结，常用的方式
-
-- ```sed 's/^Str/String/' replace.java```
-
-- ```sed -i 's/\.$/\;/' replace.java```
-
-- ```sed -i 's/jack/me/g' replace.java```
-
-### 5. 总结
-
-#### 5.1 常用的 Shell 指令
-
-- find
-
-- grep
-
-- 管道操作符 |
-
-- awk
-
-- sed
 
 ## 感谢
 
-[awk 之 asort 与 asorti 数组排序区别及演示](http://blog.chinaunix.net/uid-21374062-id-3189744.html)
-
-[awk 数组排序教程(内置函数排序与自定义排序函数)](http://linux.it.net.cn/e/command/2015/0502/14989.html)
+...
