@@ -62,13 +62,20 @@
     - 分布式
         - [分布式id生成算法 - SnowFlake](tech/distributed/分布式id生成算法SnowFlake.md)
     - Linux
-        - [Linux](./tech/linux/Linux.md)
+        - [Linux - find、grep、awk、sed 常用命令](./tech/linux/Linux.md)
         - [select、poll、epoll](./tech/linux/select_poll_epoll.md)
         - [零拷贝 - NIO](./tech/linux/零拷贝_NIO.md)
     - 网络
-        - [TCP](./tech/network/tcp.md)
+        - [TCP 三次握手、四次挥手详解](./tech/network/tcp.md)
         - [HTTP 与 HTTPS 详解与区别](./tech/network/http与https.md)
 
+- 【设计与实战】
+    - [搭建并行处理管道 - Golang](./design/golang_crawler/golang_crawler.md)
+    - [原生爬虫 - Golang](./design/golang_crawler/golang_crawler.md)
+    - [流量统计系统 - Golang](./design/golang_crawler/golang_crawler.md)
+    - [开发分布式任务调度_pending - Golang](./design/golang_crontab/golang_crontab.md)
+
+    
 
 - 【反省与总结】
     - 面试
@@ -96,7 +103,7 @@
 
 ## TODO list
 
-- Linux 
+- Golang 开发分布式任务调度
 
 - 初识 kafka 
 
