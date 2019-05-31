@@ -9,20 +9,43 @@
 ## 目录简介
 
 - [语言基础](#语言基础)
+    - Python
+    - Golang
+    - Java
 
 - [数据结构与算法](#数据结构与算法)
+    - 我的专题仓库
 
 - [框架技术](#框架技术)
-
+    - Scrapy
+    - Elasticsearch
+    - SpringCloud
+    
 - [各种技术](#各种技术)
+    - Redis
+    - Kafka
+    - MySQL
+    - Nginx
+    - 分布式
+    - Linux
+    - 网络
 
 - [设计与实战](#设计与实战)
+    - 搭建并行处理管道 - Golang
+    - 原生爬虫 - Golang
+    - 流量统计系统 - Golang
+    - 开发分布式任务调度_pending - Golang
 
 - [反省与总结](#反省与总结)
+    - 面试
+    - 其他
 
 - [工具](#工具)
+    - Pycharm上传到码云或者GitHub
+    - 欢迎使用CSDN-markdown编辑器
 
 - [chinese](#chinese)
+    - chinese_300_tang_poems
 
 ## 目录
 
@@ -71,7 +94,7 @@
     - [高并发情况下Redis做缓存的一系列问题_pending](tech/redis/高并发情况下Redis做缓存的一系列问题_pending.md)
 - Kafka
     - [初识kafka_pending](tech/kafka/初识kafka_pending.md)
-- MYSQL
+- MySQL
     - [数据库优化 - 索引优化](tech/mysql/数据库优化——索引优化.md)
     - [Mysql大表处理_pending](tech/mysql/Mysql大表处理_pending.md)
     - [数据库 - 如何设计一个关系型数据库](tech/mysql/数据库——1_数据库架构.md)
