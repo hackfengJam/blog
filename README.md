@@ -70,9 +70,9 @@
         - [HTTP 与 HTTPS 详解与区别](./tech/network/http与https.md)
 
 - 【设计与实战】
-    - [搭建并行处理管道 - Golang](./design/golang_crawler/golang_crawler.md)
+    - [搭建并行处理管道 - Golang](./design/golang_pipeline/golang_pipeline.md)
     - [原生爬虫 - Golang](./design/golang_crawler/golang_crawler.md)
-    - [流量统计系统 - Golang](./design/golang_crawler/golang_crawler.md)
+    - [流量统计系统 - Golang](./design/golang_analysis/golang_analysis.md)
     - [开发分布式任务调度_pending - Golang](./design/golang_crontab/golang_crontab.md)
 
     
