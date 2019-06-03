@@ -2,7 +2,7 @@
 
 ### What is etcd ? 
 
-以下内容，译自 [ etcd  官网](https:// etcd .io/)
+以下内容，译自 [etcd 官网](https://etcd.io/)
 
 --- 
 
