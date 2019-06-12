@@ -154,8 +154,11 @@
 ## TODO list
 
 <details>
-<summary>TODO List</summary>
+<summary>展开查看</summary>
 
+- 有个webhook接口：目前直接返回200，并调用异步任务系统。
+  现在 有三个 HTTP 请求（1:create, 2:modify, 3:delete） 过来（三个请求时间间隔不一定，可能没有 2:modify），需要它们三个异步任务顺序执行。（给每一个请求 一个id，通过id hash发到执行的机器，执行机器分配线程执行是拿到 id 存在已分配的线程中 ）
+  
 - 初识 kafka 
 
 - kafka 高级特性之消息事务
