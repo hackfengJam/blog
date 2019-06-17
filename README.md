@@ -122,6 +122,7 @@
 - ##### [原生爬虫 - Golang](./design/golang_crawler/golang_crawler.md)
 - ##### [流量统计系统 - Golang](./design/golang_analysis/golang_analysis.md)
 - ##### [开发分布式任务调度_pending - Golang](./design/golang_crontab/golang_crontab.md)
+- ##### [微信抢红包功能设计 - Golang](./design/red_envelope/red_envelope.md)
 
     
 #### 【反省与总结】
