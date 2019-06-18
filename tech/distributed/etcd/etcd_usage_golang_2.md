@@ -1,4 +1,4 @@
-## etcd 使用（下） - Golang
+## Golang 操作 etcd（下）
 
 #### 1. Lease 租约 实现 KV 过期
 

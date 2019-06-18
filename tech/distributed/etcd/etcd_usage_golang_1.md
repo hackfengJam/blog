@@ -1,4 +1,4 @@
-## etcd 使用（上） - Golang
+## Golang 操作 etcd（上）
 
 
 #### 1. 连接 etcd
