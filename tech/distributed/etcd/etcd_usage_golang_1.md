@@ -19,6 +19,9 @@
 
 #### 1. 连接 etcd
 
+<details>
+<summary>查看源代码</summary>
+
 ```golang
 package main
 
@@ -55,7 +58,13 @@ func main() {
 
 ```
 
+</details>
+
+
 #### 2. Put 写入 KV
+
+<details>
+<summary>查看源代码</summary>
 
 ```golang
 package main
@@ -106,7 +115,13 @@ func main() {
 
 ```
 
+</details>
+
+
 #### 3. Get 读取 KV
+
+<details>
+<summary>查看源代码</summary>
 
 ```golang
 
@@ -153,7 +168,13 @@ func main() {
 
 ```
 
+</details>
+
+
 #### 4. Get 读取目录下所有 KV
+
+<details>
+<summary>查看源代码</summary>
 
 ```golang
 
@@ -204,7 +225,13 @@ func main() {
 
 ```
 
+</details>
+
+
 #### 5. Delete 删除 KV
+
+<details>
+<summary>查看源代码</summary>
 
 ```golang
 
@@ -258,6 +285,8 @@ func main() {
 
 
 ```
+
+</details>
 
 ### 相关博文
 

@@ -16,6 +16,10 @@
 
 #### 1. Lease 租约 实现 KV 过期
 
+
+<details>
+<summary>查看源代码</summary>
+
 ```golang
 package main
 
@@ -115,7 +119,14 @@ func main() {
 
 ```
 
+</details>
+
+
 #### 2. Watch 监听目录变化
+
+
+<details>
+<summary>查看源代码</summary>
 
 ```golang
 
@@ -212,7 +223,15 @@ func main() {
 
 ```
 
+</details>
+
+
+
 #### 3. Op 取代 Get，Put，Delete 方法
+
+
+<details>
+<summary>查看源代码</summary>
 
 ```golang
 
@@ -286,7 +305,13 @@ func main() {
 
 ```
 
+</details>
+
+
 #### 4. 事务txn 实现分布式锁
+
+<details>
+<summary>查看源代码</summary>
 
 ```golang
 
@@ -416,6 +441,8 @@ func main() {
 }
 
 ```
+
+</details>
 
 
 ### 相关博文
