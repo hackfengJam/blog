@@ -109,6 +109,8 @@
     - etcd
         - [What is etcd?](tech/distributed/etcd/etcd_study_1_what_is_etcd.md)
         - [etcd 功能与原理](tech/distributed/etcd/etcd_function_and_principle.md)
+        - [etcd 使用（上） - Golang](tech/distributed/etcd/etcd_usage_golang_1.md)
+        - [etcd 使用（下） - Golang](tech/distributed/etcd/etcd_usage_golang_2.md)
 - ##### Linux
     - [Linux - find、grep、awk、sed 常用命令](./tech/linux/Linux.md)
     - [select、poll、epoll](./tech/linux/select_poll_epoll.md)
