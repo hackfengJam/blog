@@ -108,6 +108,7 @@
     - [分布式id生成算法 - SnowFlake](tech/distributed/分布式id生成算法SnowFlake.md)
     - etcd
         - [What is etcd?](tech/distributed/etcd/etcd_study_1_what_is_etcd.md)
+        - [etcd 功能与原理](tech/distributed/etcd/etcd_function_and_principle.md)
 - ##### Linux
     - [Linux - find、grep、awk、sed 常用命令](./tech/linux/Linux.md)
     - [select、poll、epoll](./tech/linux/select_poll_epoll.md)
