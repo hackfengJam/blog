@@ -1,5 +1,21 @@
 ## Golang 操作 etcd（上）
 
+### 目录
+
+[1. 连接 etcd](#1-连接-etcd)
+
+[2. Put 写入 KV](#2-put-写入-kv)
+
+[3. Get 读取 KV](#3-get-读取-kv)
+
+[4. Get 读取目录下所有 KV](#4-get-读取目录下所有-kv)
+
+[5. Delete 删除 KV](#5-delete-删除-kv)
+
+--- 
+
+[相关博文](#相关博文)
+
 
 #### 1. 连接 etcd
 
@@ -243,6 +259,13 @@ func main() {
 
 ```
 
+### 相关博文
+
+- [什么是 etcd?](/tech/distributed/etcd/etcd_study_1_what_is_etcd.md)
+
+- [etcd 功能与原理](/tech/distributed/etcd/etcd_function_and_principle.md)
+
+- [Golang 操作 etcd（下）](/tech/distributed/etcd/etcd_usage_golang_2.md)
 
 
 #### 感谢

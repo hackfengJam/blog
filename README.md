@@ -107,7 +107,7 @@
 - ##### 分布式
     - [分布式id生成算法 - SnowFlake](tech/distributed/分布式id生成算法SnowFlake.md)
     - etcd
-        - [What is etcd?](tech/distributed/etcd/etcd_study_1_what_is_etcd.md)
+        - [什么是 etcd?](tech/distributed/etcd/etcd_study_1_what_is_etcd.md)
         - [etcd 功能与原理](tech/distributed/etcd/etcd_function_and_principle.md)
         - [Golang 操作 etcd（上）](tech/distributed/etcd/etcd_usage_golang_1.md)
         - [Golang 操作 etcd（下）](tech/distributed/etcd/etcd_usage_golang_2.md)

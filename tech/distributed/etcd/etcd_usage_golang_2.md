@@ -1,5 +1,19 @@
 ## Golang 操作 etcd（下）
 
+### 目录
+
+[1. Lease 租约 实现 KV 过期](#1-lease-租约-实现-kv-过期)
+
+[2. Watch 监听目录变化](#2-watch-监听目录变化)
+
+[3. Op 取代 Get，Put，Delete 方法](#3-op-取代-getputdelete-方法)
+
+[4. 事务txn 实现分布式锁](#4-事务txn-实现分布式锁)
+
+--- 
+
+[相关博文](#相关博文)
+
 #### 1. Lease 租约 实现 KV 过期
 
 ```golang
@@ -402,6 +416,15 @@ func main() {
 }
 
 ```
+
+
+### 相关博文
+
+- [什么是 etcd?](/tech/distributed/etcd/etcd_study_1_what_is_etcd.md)
+
+- [etcd 功能与原理](/tech/distributed/etcd/etcd_function_and_principle.md)
+
+- [Golang 操作 etcd（上）](/tech/distributed/etcd/etcd_usage_golang_1.md)
 
 
 #### 感谢
