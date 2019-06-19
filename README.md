@@ -106,6 +106,8 @@
     - [nginx - 使用之配置文件的组成及主配置段的指令之二](tech/nginx/nginx使用之配置文件的组成及主配置段的指令之二.md)
 - ##### 分布式
     - [分布式id生成算法 - SnowFlake](tech/distributed/分布式id生成算法SnowFlake.md)
+    - Raft
+        - [Raft 领导选举](tech/distributed/raft/raft_leader_election.md)
     - etcd
         - [什么是 etcd?](tech/distributed/etcd/etcd_study_1_what_is_etcd.md)
         - [etcd 功能与原理](tech/distributed/etcd/etcd_function_and_principle.md)
