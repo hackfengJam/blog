@@ -135,7 +135,7 @@
 <details>
 <summary>分布式</summary>
 
-- [分布式id生成算法 - SnowFlake](tech/distributed/分布式id生成算法SnowFlake.md)
+- [分布式id生成算法 - SnowFlake](tech/distributed/algo/分布式id生成算法SnowFlake.md)
 
 </details>
  
