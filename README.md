@@ -118,7 +118,7 @@
     - Raft
         - [Raft 领导选举](tech/distributed/raft/raft_leader_election.md)
     - Celery
-        - [Celery 的正确打开方式](tech/distributed/celery/celery_opens_correct_way.md)
+        - [Celery 的正确打开方式 - 结合「官方文档」及「实际用例」了解 Celery](tech/distributed/celery/celery_opens_correct_way.md)「**关键词：分布式任务队列；Celery**」
     - etcd
         - [什么是 etcd?](tech/distributed/etcd/etcd_study_1_what_is_etcd.md)
         - [etcd 功能与原理](tech/distributed/etcd/etcd_function_and_principle.md)
