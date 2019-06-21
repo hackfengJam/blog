@@ -8,6 +8,9 @@
 
 ## 目录简介
 
+<details>
+<summary>展开目录简介</summary>
+
 - [语言基础](#语言基础)
     - [Python](#python)
     - [Golang](#golang)
@@ -47,7 +50,13 @@
 - [chinese](#chinese)
     - [chinese_300_tang_poems](#chinese_300_tang_poems)
 
+</details>
+
+
 ## 目录
+
+<details open>
+<summary>目录详情</summary>
 
 #### 【语言基础】
 
@@ -151,6 +160,8 @@
 - ##### chinese_300_tang_poems
     - 五言古诗_三十三首
         - [张九龄 - 感遇_二首](./chinese/chinese_300_tang_poems/五言古诗_三十三首/张九龄/感遇_二首.md)
+
+</details>
 
 
 ## 开源社区链接
