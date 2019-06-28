@@ -596,6 +596,20 @@ def webhook_print(self, message_body, *args, **kwargs):
 
 - Celery 是比较强大的异步任务框架，遇到问题时，多看官方文档，以及在开源社区的提问（相信大多数问题已经有人提问，且有合理的解答）；这真的非常重要。
 
+- 定时任务忘记写了，后续有空补一下 -:)
+
+    - timedelta
+    
+    - crontab
+    
+    - 相关文档
+    
+        - [Crontab schedules](http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html?#crontab-schedules) 
+        
+        - [celery.schedules](http://docs.celeryproject.org/en/latest/reference/celery.schedules.html#celery-schedules)
+        
+        - [celery.bin.beat](http://docs.celeryproject.org/en/latest/reference/celery.bin.beat.html?#celery-bin-beat)
+
 
 ### 相关博文
 
