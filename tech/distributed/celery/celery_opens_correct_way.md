@@ -610,6 +610,7 @@ def webhook_print(self, message_body, *args, **kwargs):
         
         - [celery.bin.beat](http://docs.celeryproject.org/en/latest/reference/celery.bin.beat.html?#celery-bin-beat)
 
+- [Message Protocol](http://docs.celeryq.org/en/latest/internals/protocol.html)
 
 ### 相关博文
 
