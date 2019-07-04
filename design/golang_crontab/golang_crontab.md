@@ -4,4 +4,6 @@
 
 ---
 
-- 持续完善中
+- 架构图
+
+![Alt text](./images/architecture.png)
