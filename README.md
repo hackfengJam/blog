@@ -8,23 +8,23 @@
 
 ## 目录简介
 
-<details>
+<details open>
 <summary>展开目录简介</summary>
 
-- [语言基础](#语言基础)
+- [语言基础](./contents/basic.md)
     - [Python](#python)
     - [Golang](#golang)
     - [Java](#java)
 
-- [数据结构与算法](#数据结构与算法)
+- [数据结构与算法](./contents/algorithm.md)
     - [我的专题仓库](#我的专题仓库helloalgorithm有介绍点击这里)
 
-- [框架技术](#框架技术)
+- [框架技术](./contents/framework.md)
     - [Scrapy](#scrapy)
     - [Elasticsearch](#elasticsearch)
     - [SpringCloud](#springcloud)
     
-- [各种技术](#各种技术)
+- [各种技术](./contents/misc.md)
     - [Redis](#redis)
     - [Kafka](#kafka)
     - [MySQL](#mysql)
@@ -33,21 +33,21 @@
     - [Linux](#linux)
     - [网络](#网络)
 
-- [设计与实战](#设计与实战)
+- [设计与实战](./contents/design.md)
     - [搭建并行处理管道 - Golang](#搭建并行处理管道---golang)
     - [原生爬虫 - Golang](#原生爬虫---golang)
     - [流量统计系统 - Golang](#流量统计系统---golang)
     - [开发分布式任务调度 - Golang](#开发分布式任务调度_pending---golang)
 
-- [反省与总结](#反省与总结)
+- [反省与总结](./contents/reflection_and_summary.md)
     - [面试](#面试)
     - [其他](#其他)
 
-- [工具](#工具)
+- [工具](./contents/tools.md)
     - [Pycharm上传到码云或者GitHub](#pycharm上传到码云或者github)
     - [欢迎使用CSDN-markdown编辑器](#欢迎使用csdn-markdown编辑器)
 
-- [chinese](#chinese)
+- [chinese](./contents/chinese.md)
     - [chinese_300_tang_poems](#chinese_300_tang_poems)
 
 </details>
@@ -55,7 +55,7 @@
 
 ## 目录
 
-<details open>
+<details>
 <summary>目录详情</summary>
 
 #### 【语言基础】
