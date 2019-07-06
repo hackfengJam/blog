@@ -53,7 +53,7 @@
     - [搭建并行处理管道 - Golang](./contents/design.md#搭建并行处理管道---golang)
     - [原生爬虫 - Golang](./contents/design.md#原生爬虫---golang)
     - [流量统计系统 - Golang](./contents/design.md#流量统计系统---golang)
-    - [开发分布式任务调度 - Golang](./contents/design.md#开发分布式任务调度_pending---golang)
+    - [开发分布式任务调度 - Golang](./contents/design.md#开发分布式任务调度---golang)
 
 - [反省与总结](./contents/reflection_and_summary.md)
     - [面试](./contents/reflection_and_summary.md#面试)
