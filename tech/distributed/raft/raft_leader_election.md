@@ -95,23 +95,29 @@ Raft 使用投票的方式来阻止一个候选人赢得选举除非这个候选
 
 ### 相关博文
 
-- [Raft 论文译文](https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md)
+- [Raft 日志复制](/tech/distributed/raft/raft_log_replication.md)
+
+- [Raft 一致性算法](/tech/distributed/raft/raft_consensus_algorithm.md)
 
 - [什么是 etcd?](/tech/distributed/etcd/etcd_study_1_what_is_etcd.md)
 
 - [etcd 功能与原理](/tech/distributed/etcd/etcd_function_and_principle.md)
+
+- [Golang 操作 etcd（上）](/tech/distributed/etcd/etcd_usage_golang_1.md)
 
 - [Golang 操作 etcd（下）](/tech/distributed/etcd/etcd_usage_golang_2.md)
 
 
 #### 感谢
 
-[Raft 英文 paper pdf](https://ramcloud.atlassian.net/wiki/download/attachments/6586375/raft.pdf)
+- [Raft 英文 paper pdf](https://ramcloud.atlassian.net/wiki/download/attachments/6586375/raft.pdf)
 
-[Raft 作者讲解视频](https://www.youtube.com/watch?v=YbZ3zDzDnrw&feature=youtu.be)
+- [Raft 作者讲解视频](https://www.youtube.com/watch?v=YbZ3zDzDnrw&feature=youtu.be)
 
-[Raft 作者讲解视频对应的 PPT](https://ramcloud.atlassian.net/wiki/download/attachments/6586375/raft.pdf)
+- [Raft 作者讲解视频对应的 PPT](https://ramcloud.atlassian.net/wiki/download/attachments/6586375/raft.pdf)
 
-[Raft 动画](http://thesecretlivesofdata.com/raft/)
+- [Raft 论文译文](https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md)
+
+- [Raft 动画](http://thesecretlivesofdata.com/raft/)
 
 

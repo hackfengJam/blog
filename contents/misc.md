@@ -30,6 +30,8 @@
     - [分布式id生成算法 - SnowFlake](../tech/distributed/algo/分布式id生成算法SnowFlake.md)
     - Raft
         - [Raft 领导选举](../tech/distributed/raft/raft_leader_election.md)
+        - [Raft 一致性算法](../tech/distributed/raft/raft_consensus_algorithm.md)
+        - [Raft 日志复制](../tech/distributed/raft/raft_log_replication.md)
     - Celery
         - [Celery 的正确打开方式 - 结合「官方文档」及「实际用例」了解 Celery](../tech/distributed/celery/celery_opens_correct_way.md)「**关键词：分布式任务队列；Celery**」
     - etcd
