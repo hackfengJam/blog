@@ -14,6 +14,7 @@
 - ##### Redis
     - [Redis的正确打开方式](../tech/redis/Redis的正确打开方式.md)
     - [高并发情况下Redis做缓存的一系列问题_pending](../tech/redis/高并发情况下Redis做缓存的一系列问题_pending.md)
+    - [Redis Pipeline 及 主从同步](../tech/redis/redis_pipeline_and_sync_master_slaver.md)
 - ##### Kafka
     - [初识kafka_pending](../tech/kafka/初识kafka_pending.md)
 - ##### MySQL
