@@ -202,6 +202,8 @@
 <details>
 <summary>展开查看</summary>
 
+- 数据库和缓存双写一致性方案解析
+
 - raft pre-vote 算法，《CONSENSUS: BRIDGING THEORY AND PRACTICE》   
 
 - 唯一索引与普通索引的区别
