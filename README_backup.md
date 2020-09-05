@@ -103,7 +103,7 @@
 <details>
 <summary>Kafka</summary>
 
-- [初识kafka_pending](tech/kafka/初识kafka_pending.md)
+- [kafka](tech/kafka/kafka.md)  
 
 </details>
  

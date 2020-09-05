@@ -120,7 +120,7 @@
     - [高并发情况下Redis做缓存的一系列问题_pending](./tech/redis/高并发情况下Redis做缓存的一系列问题_pending.md)
     - [Redis Pipeline 及 主从同步](./tech/redis/redis_pipeline_and_sync_master_slaver.md)
 - ##### Kafka
-    - [初识kafka_pending](tech/kafka/初识kafka_pending.md)
+    - [kafka](tech/kafka/kafka.md)  
 - ##### MySQL
     - [数据库优化 - 索引优化](tech/mysql/数据库优化——索引优化.md)
     - [Mysql大表处理_pending](tech/mysql/Mysql大表处理_pending.md)
