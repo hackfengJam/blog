@@ -27,6 +27,7 @@
 
 - ##### Golang
     - [用 golang 实现 nginx 反向代理及负载均衡](../basic/golang/用go实现nginx反向代理及负载均衡.md)
+    - [channel & select](../basic/golang/source_code/channel.md)
     
 - ##### Java
     - Pending
