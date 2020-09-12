@@ -181,6 +181,7 @@
     - [这段时间六家公司面经 - 2019年 - 07.11-07.22](./reflection_and_summary/interview/interview.md)  
     - [识货 —— 面经](./reflection_and_summary/interview/shihuo.md)  
     - [华为OD —— 面经](./reflection_and_summary/interview/hw_OD.md)  
+    - [英语流利说 —— 面经](./reflection_and_summary/interview/liulishuo.md)   
 
 - ##### 其他    
     - [给学弟学妹们总的方向及建议](./reflection_and_summary/misc/给学弟学妹们总的方向及建议.md)
