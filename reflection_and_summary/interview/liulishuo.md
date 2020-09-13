@@ -120,6 +120,8 @@
     - kafka 如何保证不丢消息  
     - kafka 如何保证精确一次投放消息  
     - 说一下 consumer group  
+    - consumer 是不是越多越好  
+    - partition 是不是越多越好  
     - 业务方如何保证消费幂等  
     - 业务如何处理 消息处理失败    
     - 非法消息处理  
