@@ -1,0 +1,11 @@
+.DS_Store
+.idea/
+.vscode
+
+*.prof
+*.pid
+*.pid.lock
+*_port
+.coverage.out
+
+reflection_and_summary/gignore/*
