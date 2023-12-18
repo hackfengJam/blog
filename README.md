@@ -161,6 +161,7 @@
     - [Git workflow](./tech/architecture/git_workflow.md)
     - [你的项目应该如何分层？](./tech/architecture/how_should_your_project_be_stratified.md)
     - [什么是扇入和扇出？](./tech/architecture/fanout_and_fanin.md)
+    - [13 Code Review Standards Inspired by Google](./tech/architecture/style/code_13.md)
 
 #### 【设计与实战】
 
